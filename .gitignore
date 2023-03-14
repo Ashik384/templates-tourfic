@@ -1,0 +1,12 @@
+/node_modules
+node_modules
+tourfic
+*.zip
+/tourfic
+.idea
+README.md
+*.LICENSE.txt
+*.map
+
+git config --global user.name "Ashik384"
+git config --global user.email "ashikulislam384@gmail.com"

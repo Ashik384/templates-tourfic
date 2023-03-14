@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+@import 'variable';
+
+//Font family Global
+h1, h2, h3, h4, h5, h6, p{
+    font-family: $font-primary;
+    font-weight: $font-weight-medium;
+    color: $color-black-light;
+    margin: 0px;
+}
+
+p{
+    font-size: 16px;
+    font-weight: $font-weight-normal;
+    line-height: 1.6;
+    color: $color-primary;
+    margin: 0px;
+}
