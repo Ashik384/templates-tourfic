@@ -406,6 +406,7 @@ tr:last-child {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
 }
 .tf-field-group i {
   position: absolute;
@@ -967,6 +968,24 @@ tr:last-child {
   object-fit: cover;
   width: 120px;
   height: 120px;
+}
+.tf-review-wrapper .tf-review-form .tf-review-feature-items {
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+.tf-review-wrapper .tf-review-form .ratings-container input {
+  display: none;
+}
+.tf-review-wrapper .tf-review-form .ratings-container span {
+  display: none;
+}
+.tf-review-wrapper .tf-review-form .ratings-container i:hover {
+  color: #0E3DD8;
+  cursor: pointer;
 }
 
 .tf-tour-details-right {
