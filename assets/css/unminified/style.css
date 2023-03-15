@@ -337,6 +337,16 @@ h2 {
   font-size: 30px;
 }
 
+img {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -345,11 +355,21 @@ table {
   box-shadow: 0px 13px 30px 0px #E0E8EE;
   border-radius: 5px;
 }
+@media (max-width: 767px) {
+  table {
+    font-size: 14px;
+  }
+}
 
 td {
   text-align: left;
   padding: 25px;
   line-height: 1.4;
+}
+@media (max-width: 767px) {
+  td {
+    padding: 10px;
+  }
 }
 
 td:nth-child(2) {
@@ -458,6 +478,12 @@ tr:last-child {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 767px) {
+  .tf-flex {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
 
 .tf-flex-space-bttn {
   -webkit-box-pack: justify;
@@ -545,15 +571,43 @@ tr:last-child {
   padding-bottom: 16px;
 }
 
+.tf-colmn-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.tf-colmn-3 .tf-column {
+  -ms-flex-preferred-size: calc(33.3333333333% - 16px);
+  flex-basis: calc(33.3333333333% - 16px);
+}
+
+.tf-colmn-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.tf-colmn-4 .tf-column {
+  -ms-flex-preferred-size: calc(25% - 8px);
+  flex-basis: calc(25% - 8px);
+}
+
+.tf-single-page {
+  background-color: #EBF0F4;
+  padding: 60px 0px;
+}
+
+.tf-tour-single {
+  margin-bottom: 120px;
+}
+
 .tf-container {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0px 12px;
-}
-
-.tf-tour-single {
-  background-color: #EBF0F4;
-  padding: 60px 0px;
 }
 
 .tf-single-head h1 {
@@ -567,9 +621,21 @@ tr:last-child {
   -ms-flex-preferred-size: 65%;
   flex-basis: 65%;
 }
+@media (max-width: 767px) {
+  .tf-single-details-wrapper .tf-tour-details-left {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+}
 .tf-single-details-wrapper .tf-tour-details-right {
   -ms-flex-preferred-size: 35%;
   flex-basis: 35%;
+}
+@media (max-width: 767px) {
+  .tf-single-details-wrapper .tf-tour-details-right {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
 }
 
 .tf-head-info .tf-icon {
@@ -726,6 +792,11 @@ tr:last-child {
   font-size: 26px;
   margin: 4px 0px;
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  .tf-trip-info .tf-trip-pricing .tf-price-amount {
+    font-size: 22px;
+  }
 }
 
 .tf-trip-description h2 {
@@ -987,9 +1058,42 @@ tr:last-child {
   color: #0E3DD8;
   cursor: pointer;
 }
+.tf-review-wrapper .tf-review-form .tf-review-fields .tf-field {
+  padding: 15px 20px;
+  border: 1px solid #CDCFD0;
+}
+.tf-review-wrapper .tf-review-form .tf-review-fields .tf-field::-webkit-input-placeholder {
+  color: #060D1C;
+}
+.tf-review-wrapper .tf-review-form .tf-review-fields .tf-field::-moz-placeholder {
+  color: #060D1C;
+}
+.tf-review-wrapper .tf-review-form .tf-review-fields .tf-field:-ms-input-placeholder {
+  color: #060D1C;
+}
+.tf-review-wrapper .tf-review-form .tf-review-fields .tf-field::-ms-input-placeholder {
+  color: #060D1C;
+}
+.tf-review-wrapper .tf-review-form .tf-review-fields .tf-field::placeholder {
+  color: #060D1C;
+}
+.tf-review-wrapper .tf-review-form .tf-review-fields .acceptance {
+  width: auto;
+}
+.tf-review-wrapper .tf-review-form .tf-review-fields .tf-bttn-normal {
+  border: none;
+}
+.tf-review-wrapper .tf-review-form .tf-review-fields .tf-bttn-normal:hover {
+  cursor: pointer;
+}
 
 .tf-tour-details-right {
   padding-left: 30px;
+}
+@media (max-width: 767px) {
+  .tf-tour-details-right {
+    padding-left: 0px;
+  }
 }
 .tf-tour-details-right .tf-tour-booking-box {
   background: #fff;
@@ -1060,4 +1164,42 @@ tr:last-child {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.upcomming-tours {
+  padding-top: 120px;
+  border-top: 1px solid #D0E0EC;
+}
+.upcomming-tours .tf-image-data {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+.upcomming-tours .tf-image-data img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.upcomming-tours .tf-meta-location i {
+  color: #0E3DD8;
+}
+.upcomming-tours .tf-meta-data-price {
+  position: absolute;
+  bottom: 0px;
+  background: #fff;
+  padding: 15px 22px;
+  font-size: 12px;
+}
+.upcomming-tours .tf-meta-data-price span {
+  color: #0E3DD8;
+  font-size: 20px;
+  font-weight: 500;
+}
+.upcomming-tours .tf-meta-title {
+  margin-top: 8px;
+}
+.upcomming-tours .tf-meta-title h2 {
+  font-size: 22px;
+  line-height: 1.4;
 }

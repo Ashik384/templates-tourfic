@@ -1,15 +1,18 @@
 
 @import '../base/variable';
+@import '../base/responsive';
 
+.tf-single-page {
+    background-color: #EBF0F4;
+    padding: 60px 0px;
+}
+.tf-tour-single{
+    margin-bottom: 120px;
+}
 .tf-container {
     max-width: 1240px;
     margin: 0 auto;
     padding: 0px 12px;
-}
-
-.tf-tour-single {
-    background-color: #EBF0F4;
-    padding: 60px 0px;
 }
 
 .tf-single-head{
@@ -24,10 +27,18 @@
 .tf-single-details-wrapper{
     .tf-tour-details-left {
         flex-basis: 65%;
+
+        @include breakpoint(mobile){
+            flex-basis: 100%;
+        }
     }
     
     .tf-tour-details-right {
         flex-basis: 35%;
+
+        @include breakpoint(mobile){
+            flex-basis: 100%;
+        }
     }
 }
 
@@ -170,6 +181,10 @@
             font-size: 26px;
             margin: 4px 0px;
             font-weight: $font-weight-medium;
+            
+            @include breakpoint(mobile){
+                font-size: 22px;
+            }
         }
     }
 }
@@ -478,6 +493,24 @@
                 }
             }
         }
+        .tf-review-fields{
+            .tf-field{
+                padding: 15px 20px;
+                border: 1px solid #CDCFD0;
+                &::placeholder{
+                    color: $color-black;
+                }
+            }
+            .acceptance{
+                width: auto;
+            }
+            .tf-bttn-normal{
+                border: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 
@@ -486,6 +519,9 @@
 
 .tf-tour-details-right {
     padding-left: 30px;
+    @include breakpoint(mobile){
+        padding-left: 0px;
+    }
 
     .tf-tour-booking-box  {
         background: #fff;
@@ -552,6 +588,50 @@
                 align-items: center;
                 justify-content: center;
             }
+        }
+    }
+}
+
+
+// upcomming-tours
+
+.upcomming-tours{
+    padding-top: 120px;
+    border-top: 1px solid #D0E0EC;
+
+    .tf-image-data {
+        height: 300px;
+        overflow: hidden;
+        border-radius: 5px;
+        position: relative;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .tf-meta-location{
+        i{
+            color: $color-theme;
+        }
+    }
+    .tf-meta-data-price {
+        position: absolute;
+        bottom: 0px;
+        background: #fff;
+        padding: 15px 22px;
+        font-size: 12px;
+        span {
+            color: $color-theme;
+            font-size: 20px;
+            font-weight: 500;
+
+        }
+    }
+    .tf-meta-title {
+        margin-top: $tf-space-8;
+        h2 {
+            font-size: 22px;
+            line-height: 1.4;
         }
     }
 }
