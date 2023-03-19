@@ -37,6 +37,9 @@ td {
     @include breakpoint(mobile){
         padding: 10px;
     }
+    @include breakpoint(tablet){
+        padding: 16px;
+    }
 }
 
 td:nth-child(2) {
@@ -118,12 +121,18 @@ tr:nth-child(even) {
     @include breakpoint(mobile){
         padding: $tf-space-24;
     }
+    @include breakpoint(tablet){
+        padding: $tf-space-24;
+    }
 }
 
 .tf-flex{
     display: flex;
     
     @include breakpoint(mobile){
+        flex-wrap: wrap;
+    }
+    @include breakpoint(tablet){
         flex-wrap: wrap;
     }
 }
@@ -200,12 +209,21 @@ tr:nth-child(even) {
     flex-wrap: wrap;
     .tf-column{
         flex-basis: calc((100%/3) - 16px);
+        @include breakpoint(mobile){
+            flex-basis: calc((100%/1) - 0px);
+        }
     }
 }
-.tf-colmn-4{
+.tf-column-4{
     display: flex;
     flex-wrap: wrap;
     .tf-column{
-        flex-basis: calc((100%/4) - 8px);
+        flex-basis: calc((100%/4) - 16px);
+        @include breakpoint(mobile){
+            flex-basis: calc((100%/2) - 8px);
+        }
+        @include breakpoint(tablet){
+            flex-basis: calc((100%/2) - 8px);
+        }
     }
 }
