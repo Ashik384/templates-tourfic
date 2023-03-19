@@ -114,6 +114,10 @@ tr:nth-child(even) {
 .tf-box{
     padding: $tf-space-30;
     box-shadow: 0px 13px 30px 0px #e0e8ee;
+    
+    @include breakpoint(mobile){
+        padding: $tf-space-24;
+    }
 }
 
 .tf-flex{
@@ -186,7 +190,12 @@ tr:nth-child(even) {
 }
 
 //Tourfc Columns
-.tf-colmn-3{
+.tf-column-2{
+    .tf-column{
+        flex-basis: calc((100%/2) - 16px);
+    }
+} 
+.tf-column-3{
     display: flex;
     flex-wrap: wrap;
     .tf-column{

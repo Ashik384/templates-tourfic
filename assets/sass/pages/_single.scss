@@ -26,7 +26,7 @@
 
 .tf-single-details-wrapper{
     .tf-tour-details-left {
-        flex-basis: 65%;
+        flex-basis: 68%;
 
         @include breakpoint(mobile){
             flex-basis: 100%;
@@ -34,7 +34,7 @@
     }
     
     .tf-tour-details-right {
-        flex-basis: 35%;
+        flex-basis: 32%;
 
         @include breakpoint(mobile){
             flex-basis: 100%;
@@ -75,6 +75,11 @@
     width: 100%;
     display: inline-block;
 
+    .tf-gallery-featured {
+        img{
+            width: 100%;
+        }
+    }
     .gallery img {
         width: 100%;
     }
@@ -370,6 +375,10 @@
     .tf-review-data {
         background: #fff;
         border-radius: $tf-brds-default;
+        flex-basis: 20%;
+        @include breakpoint(mobile){
+            flex-basis: 100%;
+        }
 
         .tf-list{
             margin-top: -8px;
@@ -403,15 +412,19 @@
             }
         }
 
-        .tf-review-data {
-            flex-basis: 20%;
-        }
-        
         .tf-review-data-features {
             flex-basis: 80%;
+            padding-left: 30px;
+            @include breakpoint(mobile){
+                flex-basis: 100%;
+                padding-left: 0px;
+            }
             .tf-percent-progress{
                 column-gap: 70px;
                 flex-wrap: wrap;
+                @include breakpoint(mobile){
+                    column-gap: 16px;
+                }
             }
             .tf-progress-bar {
                 height: 7px;
@@ -422,6 +435,10 @@
             .tf-progress-item {
                 width: 240px;
                 margin-bottom: 16px;
+
+                @include breakpoint(mobile){
+                    width: 160px;
+                }
             }
             
             .tf-progress-bar {
@@ -516,7 +533,6 @@
 
 
 //Tourfic tour booking form/sidebar
-
 .tf-tour-details-right {
     padding-left: 30px;
     @include breakpoint(mobile){
