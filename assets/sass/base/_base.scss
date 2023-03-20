@@ -65,6 +65,19 @@ tr:nth-child(even) {
     font-weight: $font-weight-medium;
     display: block;
     text-align: center;
+    transition: all .6s ease;
+
+    &:hover{
+        background: $color-hover-normal;
+    }
+    &.bttn-primary:hover{
+        background-color: $color-hover-primary;
+        color: #fff;
+        transition: all .6s ease;
+    }
+    &.bttn-secondary:hover{
+        background-color: $color-hover-secondary;
+    }
 }
 .bttn-primary{
     background-color: $color-theme;
