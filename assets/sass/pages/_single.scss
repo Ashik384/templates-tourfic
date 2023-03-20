@@ -87,18 +87,19 @@
     display: inline-block;
 
     .tf-gallery-featured {
+
         position: relative;
         margin-bottom: 10px;
         .featured-column {
             background: #fff;
-            padding: 10px 12px;
             border-radius: 5px;
-            a{
+            a {
                 display: flex;
                 gap: 8px;
                 text-decoration: none;
                 color: #000;
                 line-height: 1em;
+                padding: 10px 12px;
             }
         }
         .featured-meta-gallery-videos{
@@ -125,6 +126,24 @@
             display: inline-block;
             float: left;
             display: none;
+        }
+        a.tf-gallery-more {
+            position: relative;
+        }
+        a.tf-gallery-more::before {
+            content: "View More → ";
+            position: absolute;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1;
+            background: #0000009c;
         }
     }
     .tf-hero-gallery .gallery a {

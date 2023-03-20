@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -743,7 +744,6 @@ tr:last-child {
 }
 .tf-hero-gallery .tf-gallery-featured .featured-column {
   background: #fff;
-  padding: 10px 12px;
   border-radius: 5px;
 }
 .tf-hero-gallery .tf-gallery-featured .featured-column a {
@@ -754,6 +754,7 @@ tr:last-child {
   text-decoration: none;
   color: #000;
   line-height: 1em;
+  padding: 10px 12px;
 }
 .tf-hero-gallery .tf-gallery-featured .featured-meta-gallery-videos {
   display: -webkit-box;
@@ -783,6 +784,30 @@ tr:last-child {
   display: inline-block;
   float: left;
   display: none;
+}
+.tf-hero-gallery .gallery a.tf-gallery-more {
+  position: relative;
+}
+.tf-hero-gallery .gallery a.tf-gallery-more::before {
+  content: "View More → ";
+  position: absolute;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6117647059);
 }
 .tf-hero-gallery .tf-hero-gallery .gallery a {
   position: relative;
