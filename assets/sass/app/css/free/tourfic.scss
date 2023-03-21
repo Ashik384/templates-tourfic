@@ -1,0 +1,19 @@
+//global css
+@import '../../../common/css/variable';
+@import '../../../common/css/mixin';
+//Base for templates
+@import '../../../common/css/base';
+@import '../../../common/css/typography';
+@import 'global/global';
+@import 'global/common';
+@import 'global/search-result';
+@import 'global/shortcode';
+
+//hotel css
+@import 'hotel/hotel';
+
+//tour css
+@import 'tour/tour';
+//Tour Templates
+@import 'tour/template1/single';
+
